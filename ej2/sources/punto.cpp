@@ -32,5 +32,5 @@ void Punto::setY(float y)
 
 Punto::~Punto()
 {
-    cout << "Destructor del punto" << endl;
+    cout << "Destructor del Punto" << endl;
 }

@@ -7,14 +7,14 @@
 class Circulo
 {
 private:
-    Punto centro;
     float radio;
+    Punto centro;
 
 public:
     Circulo(float x, float y, float radio);
     Punto getCentro();
     float getRadio();
-    void setCentro(const Punto& centro);
+    void setCentro(float x, float y);
     void setRadio(float radio);
     ~Circulo();
 };

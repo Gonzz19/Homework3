@@ -5,13 +5,7 @@
 
 using namespace std;
 
-Rectangulo::Rectangulo(float x, float y, float ancho, float alto)
-{
-    Punto izq_inf(x,y);
-    this->izq_inf = izq_inf;
-    this->ancho = ancho;
-    this->alto = alto;
-}
+Rectangulo::Rectangulo(float x, float y, float ancho, float alto) : izq_inf(x, y), ancho(ancho), alto(alto) {}
 
 Punto Rectangulo::getIzqInf()
 {

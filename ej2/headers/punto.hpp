@@ -1,5 +1,3 @@
-
-
 #ifndef PUNTO_HPP
 #define PUNTO_HPP
 #include <iostream>
@@ -11,7 +9,7 @@ private:
     float y;
 
 public:
-    Punto(float x = 0, float y = 0);
+    Punto(float x, float y);
     float getX();
     float getY();
     void setX(float x);

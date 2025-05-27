@@ -4,13 +4,7 @@
 
 using namespace std;
 
-Elipse::Elipse(float x, float y, float radioMayor, float radioMenor)
-{
-    Punto centro(x, y);
-    this->centro = centro;
-    this->radioMayor = radioMayor;
-    this->radioMenor = radioMenor;
-}
+Elipse::Elipse(float x, float y, float radioMayor, float radioMenor) : centro(x, y), radioMayor(radioMayor), radioMenor(radioMenor) {}
 
 Punto Elipse::getCentro()
 {

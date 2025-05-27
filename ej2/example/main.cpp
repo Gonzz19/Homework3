@@ -9,9 +9,10 @@
 using namespace std;
 
 int main() {
-    Circulo c(2, 3, 5);
-    Rectangulo r(1, 1, 4, 3);
-    Elipse e(0, 0, 3, 2);
+
+    Circulo c(2.0f, 3.0f, 5.0f);
+    Rectangulo r(1.0f, 1.0f, 4.0f, 3.0f);
+    Elipse e(0.0f, 0.0f, 3.f, 2.0f);
 
     ProcesadorFiguras<Circulo> procesadorCirculo;
     ProcesadorFiguras<Rectangulo> procesadorRectangulo;
@@ -20,6 +21,7 @@ int main() {
     procesadorCirculo.area(c);
     procesadorRectangulo.area(r);
     procesadorElipse.area(e);
-
+    Punto hola = c.getCentro();
+    cout << "Centro del circulo: (" << hola.getX() << ", " << hola.getY() << ")" << endl;
     return 0;
 }
