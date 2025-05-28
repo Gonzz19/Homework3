@@ -9,14 +9,17 @@ using namespace std;
 
 int main()
 {
+    // Crear instancias de las clases
     keyValue json;
     Vecreator elementos;
 
+    // Crear vectores de enteros y strings
     vector<int> vec1 = {1,2};
     vector<int> vec2 = {3,4};
     string s1 = "Hola";
     string s2 = "Mundo";
 
+    // Agregar valores al vector de doubles
     elementos.agregar(1.3);
     elementos.agregar(2.1);
     elementos.agregar(3.2);
@@ -26,9 +29,12 @@ int main()
     elementos.agregar(vec2);
 
     // El map desordenado apila los elementos, por eso los meto de esta manera
+    // Mapear los vectores a JSON
     json.mapeo("listas", elementos.getVecMatriz());
     json.mapeo("palabras", elementos.getVecString());
     json.mapeo("vec_doubles", elementos.getVecDouble());
+
+    // Imprimir el JSON resultante
     cout << json.imprimirJson() << endl;
     return 0;
 }

@@ -10,6 +10,8 @@
 using namespace std;
 
 
+// Clase para crear un vector de tipo T y agregarle elementos
+
 template <typename T>
 class VecCreator 
 {

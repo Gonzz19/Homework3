@@ -1,6 +1,8 @@
 
 #include "../headers/veccreator.hpp"
 
+
+
 template <typename T>
 VecCreator<T>::VecCreator() : vec() {}
 

@@ -12,6 +12,8 @@
 using namespace std;
 
 
+// Clase para crear el formato clave-valor e imprimirlo en formato JSON
+
 class MapJson
 {
 private:

@@ -10,6 +10,8 @@
 using namespace std;
 
 
+// Plantilla default para procesar figuras
+
 template <typename T>
 class ProcesadorFiguras 
 {
@@ -19,6 +21,8 @@ public:
         cout << "figura no reconocida" << endl;
     }
 };
+
+// Especializaciones de la plantilla para cada figura
 
 template <>
 class ProcesadorFiguras<Circulo> 
