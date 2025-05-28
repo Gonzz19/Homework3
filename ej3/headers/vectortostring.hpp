@@ -21,6 +21,8 @@ private:
     vector<vector<int>> vecMatriz;
 
 public:
+    Vecreator() = default;
+    
     template <typename T>
     void agregar(T valor)
     {
@@ -52,6 +54,8 @@ public:
     {
         return vecMatriz;
     }
+
+    ~Vecreator() = default;
 };
 
 
@@ -61,6 +65,8 @@ private:
     unordered_map<string, string> Json;
 
 public:
+    keyValue() = default;
+
     void mapeo(string clave, vector<double> valor)
     {
         ostringstream oss;
@@ -135,6 +141,8 @@ public:
         oss << "}";
         return oss.str();
     }
+
+    ~keyValue() = default;
 };
 
 
