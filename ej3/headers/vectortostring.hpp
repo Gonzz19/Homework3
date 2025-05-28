@@ -65,10 +65,10 @@ public:
     {
         ostringstream oss;
         oss << "[";
-        for (int i = 0; i < valor.size(); i++)
+        for (int i = 0; i < static_cast<int>(valor.size()); i++)
         {
             oss << valor[i];
-            if (i < valor.size() - 1)
+            if (i < static_cast<int>(valor.size()) - 1)
             {
                 oss << ", ";
             }
@@ -81,10 +81,10 @@ public:
     {
         ostringstream oss;
         oss << "[";
-        for (int i = 0; i < valor.size(); i++)
+        for (int i = 0; i < static_cast<int>(valor.size()); i++)
         {
             oss << "\"" << valor[i] << "\"";
-            if (i < valor.size() - 1)
+            if (i < static_cast<int>(valor.size()) - 1)
             {
                 oss << ", ";
             }
@@ -97,19 +97,19 @@ public:
     {
         ostringstream oss;
         oss << "[\n";
-        for (int i = 0; i < valor.size(); i++)
+        for (int i = 0; i < static_cast<int>(valor.size()); i++)
         {
             oss << " \t[";
-            for (int j = 0; j < valor[i].size(); j++)
+            for (int j = 0; j < static_cast<int>(valor[i].size()); j++)
             {
                 oss << valor[i][j];
-                if (j < valor[i].size() - 1)
+                if (j < static_cast<int>(valor[i].size()) - 1)
                 {
                     oss << ", ";
                 }
             }
             oss << "]";
-            if (i < valor.size() - 1)
+            if (i < static_cast<int>(valor.size()) - 1)
             {
                 oss << ",\n";
             }
@@ -126,7 +126,7 @@ public:
         for (pair<string, string> par : Json)
         {
             oss << " \"" << par.first << "\" : " << par.second;
-            if (count < Json.size()-1)
+            if (count < static_cast<int>(Json.size())-1)
             {
                 oss << ",";
             }

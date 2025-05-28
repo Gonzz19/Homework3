@@ -25,6 +25,7 @@ int main()
     elementos.agregar(vec1);
     elementos.agregar(vec2);
 
+    // El map desordenado apila los elementos, por eso los meto de esta manera
     json.mapeo("listas", elementos.getVecMatriz());
     json.mapeo("palabras", elementos.getVecString());
     json.mapeo("vec_doubles", elementos.getVecDouble());

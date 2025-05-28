@@ -1,5 +1,5 @@
 CXX = g++
-CXXFLAGS = -Wall -Wextra -std=c++1
+CXXFLAGS = -Wall -Wextra -std=c++17
 INCLUDES = -Iheaders
 SRC_DIR = sources
 OBJ_DIR = obj
