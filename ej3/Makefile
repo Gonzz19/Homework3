@@ -6,7 +6,7 @@ OBJ_DIR = obj
 EXE_DIR = example
 SRCS = $(wildcard $(SRC_DIR)/*.cpp)
 OBJS = $(patsubst $(SRC_DIR)/%.cpp,$(OBJ_DIR)/%.o,$(SRCS))
-TARGET = $(EXE_DIR)/main
+TARGET = $(EXE_DIR)/main2
 
 all: $(TARGET)
 
