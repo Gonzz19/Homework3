@@ -21,9 +21,7 @@ private:
 
 public:
     MapJson();
-    void mapeo(string clave, vector<double> valor);
-    void mapeo(string clave, vector<string> valor);
-    void mapeo(string clave, vector<vector<int>> valor);
+    void mapeo(string clave, string valor);
     string imprimirJson();
     ~MapJson() = default;
 };

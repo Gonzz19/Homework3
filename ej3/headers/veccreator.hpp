@@ -20,7 +20,8 @@ private:
 
 public:
     VecCreator();
-    void agregar(T value);
+    void agregar(T valor);
+    string vecTostring();
     vector<T> getVector();
     ~VecCreator() = default;
 };

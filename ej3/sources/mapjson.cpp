@@ -5,61 +5,9 @@ using namespace std;
 
 MapJson::MapJson() {}
 
-void MapJson::mapeo(string clave, vector<double> valor)
+void MapJson::mapeo(string clave, string valor)
 {
-    ostringstream oss;
-    oss << "[";
-    for (int i = 0; i < static_cast<int>(valor.size()); i++)
-    {
-        oss << valor[i];
-        if (i < static_cast<int>(valor.size()) - 1)
-        {
-            oss << ", ";
-        }
-    }
-    oss << "]";
-    Json[clave] = oss.str();
-}
-
-void MapJson::mapeo(string clave, vector<string> valor)
-{
-    ostringstream oss;
-    oss << "[";
-    for (int i = 0; i < static_cast<int>(valor.size()); i++)
-    {
-        oss << "\"" << valor[i] << "\"";
-        if (i < static_cast<int>(valor.size()) - 1)
-        {
-            oss << ", ";
-        }
-    }
-    oss << "]";
-    Json[clave] = oss.str();
-}
-
-void MapJson::mapeo(string clave, vector<vector<int>> valor)
-{
-    ostringstream oss;
-    oss << "[\n";
-    for (int i = 0; i < static_cast<int>(valor.size()); i++)
-    {
-        oss << " \t[";
-        for (int j = 0; j < static_cast<int>(valor[i].size()); j++)
-        {
-            oss << valor[i][j];
-            if (j < static_cast<int>(valor[i].size()) - 1)
-            {
-                oss << ", ";
-            }
-        }
-        oss << "]";
-        if (i < static_cast<int>(valor.size()) - 1)
-        {
-            oss << ",\n";
-        }
-    }
-    oss << "\n\t]";
-    Json[clave] = oss.str();
+    Json[clave] = valor;
 }
 
 string MapJson::imprimirJson()
