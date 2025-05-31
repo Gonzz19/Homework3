@@ -21,6 +21,7 @@ string MapJson::imprimirJson()
         if (count < static_cast<int>(Json.size())-1)
         {
             oss << ",";
+            count++;
         }
         oss << "\n";
     }

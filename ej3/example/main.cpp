@@ -1,7 +1,10 @@
 
-#include "../headers/vectortostring.hpp"
+#include "../headers/veccreator.hpp"
+#include "../headers/mapjson.hpp"
+
 #include <iostream>
 #include <string>
+#include <vector>
 
 
 using namespace std;
@@ -9,32 +12,30 @@ using namespace std;
 
 int main()
 {
-    // Crear instancias de las clases
-    keyValue json;
-    Vecreator elementos;
-
-    // Crear vectores de enteros y strings
-    vector<int> vec1 = {1,2};
-    vector<int> vec2 = {3,4};
-    string s1 = "Hola";
-    string s2 = "Mundo";
+    VecCreator<double> vecDoubleCreator;
+    VecCreator<string> vecStringCreator;
+    VecCreator<vector<int>> vecMatrizCreator;
+    MapJson mapJson;
 
     // Agregar valores al vector de doubles
-    elementos.agregar(1.3);
-    elementos.agregar(2.1);
-    elementos.agregar(3.2);
-    elementos.agregar(s1);
-    elementos.agregar(s2);
-    elementos.agregar(vec1);
-    elementos.agregar(vec2);
+    vecDoubleCreator.agregar(1.3);
+    vecDoubleCreator.agregar(2.1);
+    vecDoubleCreator.agregar(3.2);
 
-    // El map desordenado apila los elementos, por eso los meto de esta manera
+    // Agregar valores al vector de strings
+    vecStringCreator.agregar("Hola");
+    vecStringCreator.agregar("Mundo");
+
+    // Agregar valores al vector de vectores de enteros
+    vecMatrizCreator.agregar(vector<int>{1, 2});
+    vecMatrizCreator.agregar(vector<int>{3, 4});
+
     // Mapear los vectores a JSON
-    json.mapeo("listas", elementos.getVecMatriz());
-    json.mapeo("palabras", elementos.getVecString());
-    json.mapeo("vec_doubles", elementos.getVecDouble());
+    mapJson.mapeo("listas", vecMatrizCreator.vecTostring());
+    mapJson.mapeo("palabras", vecStringCreator.vecTostring());
+    mapJson.mapeo("vec_doubles", vecDoubleCreator.vecTostring());
 
     // Imprimir el JSON resultante
-    cout << json.imprimirJson() << endl;
+    cout << mapJson.imprimirJson() << endl;
     return 0;
 }
