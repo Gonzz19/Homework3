@@ -31,9 +31,15 @@ int main()
     vecMatrizCreator.agregar(vector<int>{3, 4});
 
     // Mapear los vectores a JSON
+<<<<<<< HEAD
     mapJson.mapeo("listas", vecMatrizCreator.vecTostring());
     mapJson.mapeo("palabras", vecStringCreator.vecTostring());
     mapJson.mapeo("vec_doubles", vecDoubleCreator.vecTostring());
+=======
+    mapJson.mapeo("listas", vecMatrizCreator.getVector());
+    mapJson.mapeo("palabras", vecStringCreator.getVector());
+    mapJson.mapeo("vec_doubles", vecDoubleCreator.getVector());
+>>>>>>> c66287349add1b374fa6ac0fb47a1e9b0333dd35
 
     // Imprimir el JSON resultante
     cout << mapJson.imprimirJson() << endl;
