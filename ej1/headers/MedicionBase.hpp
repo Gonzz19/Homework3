@@ -4,18 +4,25 @@
 #define MEDICIONBASE_HPP
 
 #include "IMediciones.hpp"
+#include <memory>
+
+using namespace std;
 
 class MedicionBase : public IMediciones 
 {
 protected:
-    float* tiempoMedicion;
+    unique_ptr<float> tiempoMedicion;
 
 public:
     MedicionBase(float t);
-    virtual ~MedicionBase() = default;
+    MedicionBase(const MedicionBase& other);
 
     float getTiempo();
+    void serializar(ofstream& out) override;
+    void deserializar(ifstream& in) override;
     virtual void imprimir() = 0;
+
+    virtual ~MedicionBase() = default;
 };
 
 #endif

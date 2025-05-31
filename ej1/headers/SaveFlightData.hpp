@@ -10,16 +10,17 @@ using namespace std;
 
 class SaveFlightData 
 {
-private:
+public:
     Posicion posicion;
     Presion presion;
 
-public:
-    SaveFlightData(const Posicion& p, const Presion& q);
+    SaveFlightData(Posicion& pos, Presion& pre);
 
     void serializar(ofstream& out);
     void deserializar(ifstream& in);
     void imprimir();
+
+    ~SaveFlightData() = default;
 };
 
 #endif

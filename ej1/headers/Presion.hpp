@@ -13,11 +13,13 @@ public:
     float presionEstatica;  
     float presionDinamica;  
 
-    Presion(float p, float q, float t);
+    Presion(float pe, float pd, float t);
 
     void imprimir() override;
     void serializar(ofstream& out) override;
     void deserializar(ifstream& in) override;
+
+    ~Presion() override = default;
 };
 
 #endif 

@@ -19,6 +19,8 @@ public:
     void imprimir() override;
     void serializar(ofstream& out) override;
     void deserializar(ifstream& in) override;
+
+    ~Posicion() override = default;
 };
 
 #endif
